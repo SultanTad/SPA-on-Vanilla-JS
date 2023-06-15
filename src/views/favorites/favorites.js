@@ -1,0 +1,40 @@
+import { AbstractView } from "../../common/view";
+import onChange from "on-change";
+import { CardList } from "../../components/card-list/card-list";
+import { Header } from "../../components/header/header";
+
+export class FavoritesView extends AbstractView {
+    constructor(appState) {
+        super();
+        this.appState = appState;
+        this.appState = onChange(this.appState, this.setFavorites.bind(this));
+        this.setTitle("Поиск книг");
+      }
+    
+      destroy() {
+        onChange.unsubscribe(this.appState)
+      }
+    
+      setFavorites(path) {
+        if(path==="favorites")
+        this.render()
+      } 
+
+      render() {
+        const favorites = document.createElement("div");
+        favorites.innerHTML = `
+            <h1 class="header__title">
+                Избранное
+            </h1>
+        `;
+        favorites.append(new CardList(this.appState, {list: this.appState.favorites}).render());
+        this.app.innerHTML = "";
+        this.app.append(favorites);
+        this.renderHeader();
+      }
+    
+      renderHeader() {
+        const header = new Header(this.appState).render();
+        this.app.prepend(header);
+      }
+}

@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 32px;
+}
+
+.menu__item {
+  display: flex;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+}
+
+.search-book {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.favorites-book {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.menu__counter span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 32px;
+}
+
+.menu__counter {
+  border: 1px solid #121212;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

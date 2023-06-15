@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  color: #121212;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 30px;
+}
